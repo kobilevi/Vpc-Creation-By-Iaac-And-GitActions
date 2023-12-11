@@ -19,19 +19,41 @@ Before you begin, ensure you have the following prerequisites:
 * Terraform Installed: Make sure you have Terraform installed on your local machine. You can download it from Terraform's official website.
 
 * AWS Credentials: Configure your AWS credentials with the necessary permissions for VPC, EC2, and ALB management. You can set these credentials using the AWS CLI or environment variables.
+* Aws Cli : AWS Command Line Interface (AWS CLI) is a set of tools for interacting with Amazon Web Services (AWS) from the command line. It allows you to manage various AWS services and resources directly from your terminal
 
 * Git: Ensure that Git is installed on your machine for cloning and managing the project repository.
 
 **Getting Started:**
+1.After creating Aws Account, create a user that have a permmsion to deploy terraform code, you can use this guide:
+https://www.youtube.com/watch?v=4u2HQCSuQpo 
 
-1.Clone the repository to your local environment.
+2.locate the terminal where whant to deply the environment
+creating a new branch using commant :
+git checkout -b feature
 
-2.Configure your cloud provider credentials in the Terraform configuration files.(locate in yaml file-env section)-
-https://www.youtube.com/watch?v=4u2HQCSuQpo
+3.Clone the repository to your local environment:
+git clone https://github.com/kobilevi/Vpc-Creation-By-Iaac-And-GitActions.git
 
-3.Customize the Terraform variables to meet your specific requirements, including instance types, CIDRs and ALB settings.
+4.Configure Aws Cli Secret and Access Key :
+aws configure
+paste the access key id and secret key that downloading form aws account 
 
-4.Commit and push changes to trigger the GitActions CI/CD pipeline.
+set up  Defualt region :
+in this demo i choose : us-east-1
+
+5.Set up authentication Access Key and Secret Key in your github repo (The key id and secert key from aws account):
+https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions
+
+name the key id as :
+AWS_ACCESS_KEY
+name the secret access key as :
+AWS_SECRET_ACCESS_KEY
+
+
+
+6.Customize the Terraform variables to meet your specific requirements, including instance types, CIDRs and ALB settings-**Optional**.
+
+7.Commit and push changes to trigger the GitActions CI/CD pipeline.
 **To Delete all environment use this comment in your local machine :
 terraform destroy --auto-approve
 ![VPC](https://github.com/kobilevi/Vpc-Creation-By-Iaac-And-GitActions/assets/40486401/b7fd7849-2fa0-4569-88cf-53efe2a1b1cd)
