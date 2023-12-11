@@ -32,5 +32,7 @@ https://www.youtube.com/watch?v=4u2HQCSuQpo
 3.Customize the Terraform variables to meet your specific requirements, including instance types, CIDRs and ALB settings.
 
 4.Commit and push changes to trigger the GitActions CI/CD pipeline.
-**Tם Delete all environment use this comment in your local machine :
+**To Delete all environment use this comment in your local machine :
 terraform destroy --auto-approve
+![VPC](https://github.com/kobilevi/Vpc-Creation-By-Iaac-And-GitActions/assets/40486401/b7fd7849-2fa0-4569-88cf-53efe2a1b1cd)
+
