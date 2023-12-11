@@ -1,7 +1,7 @@
 
 ![Diagram](https://github.com/kobilevi/Vpc-Creation-By-Iaac-And-GitActions/assets/40486401/e08a062d-e14a-475d-8ecf-b0e3456af7bc)
 # Vpc-Creation-By-Iaac-And-GitHub Actions
-This project leverages Terraform to automate the deployment of a Virtual Private Cloud (VPC) Using GitGub Actions CI/CD.
+This project leverages Terraform to automate the deployment of a Virtual Private Cloud (VPC) Using GitHub Actions CI/CD.
 
 * The VPC is configured with a CIDR block of 10.0.0.0/16, providing a scalable and isolated network environment. Within this VPC, two subnets are created: 10.0.1.0/24 and 10.0.2.0/24, offering segmented IP spaces for different components or services.
 The code will create two EC2 instances are connected to an Application Load Balancer, facilitating load distribution and high availability. The ALB listens on port 80 for incoming traffic.
